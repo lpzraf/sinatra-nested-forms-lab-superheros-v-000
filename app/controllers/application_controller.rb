@@ -11,8 +11,9 @@ class App < Sinatra::Base
     end
     
     post '/teams' do
+        binding.pry
         @team = Team.new(params[:team][:name],params[:team][:motto])
-      binding.pry
+  
       erb :team
     end
 end
