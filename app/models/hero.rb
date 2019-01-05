@@ -15,4 +15,4 @@ class Hero
   def save
     self.class.all << self
   end
-end最
+end
