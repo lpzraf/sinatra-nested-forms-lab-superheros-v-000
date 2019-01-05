@@ -1,10 +1,18 @@
 class Hero
-  
   attr_accessor :name, :power, :bio
-  
-  def initialize(name, power, bio)
-    @name = name 
-    @power = power
-    @bio = bio
+
+  def self.all
+    @@all ||= []
   end
-end
+
+  def initialize(opts={})
+    @name  = opts[:name]
+    @power = opts[:power]
+    @bio   = opts[:bio]
+    self.save
+  end
+
+  def save
+    self.class.all << self
+  end
+end最
