@@ -11,7 +11,7 @@ class App < Sinatra::Base
     end
     
     post '/team' do
-        binding.pry
+        #binding.pry
         @team = params[:team][:name],params[:team][:motto]
   
       erb :team
